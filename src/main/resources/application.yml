@@ -1,9 +1,14 @@
 spring:
   application:
-    name: discovery-service
+    name: cloud-discovery-service
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URI}
+      username: ${CFG_USERNAME}
+      password: ${CFG_PASSWORD}
 
 server:
   port: 8761
