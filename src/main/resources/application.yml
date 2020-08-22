@@ -1,21 +1,16 @@
 spring:
   application:
-    name: cloud-discovery-service
+    name: discovery-service
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
-  cloud:
-    config:
-      uri: ${CONFIG_SERVER_URI}
-      username: ${CFG_USERNAME}
-      password: ${CFG_PASSWORD}
 
 server:
   port: 8761
 
 eureka:
   instance:
-    hostname: eureka.cedesistemas.local
+    hostname: discovery-service-jbarrera
   client:
     register-with-eureka: false
     fetch-registry: false
